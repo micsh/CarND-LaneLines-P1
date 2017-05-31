@@ -14,16 +14,16 @@ The goals / steps of this project are the following:
 * Reflect on the work in a written report
 
 
-The implementation is provided in P1.ipynb Jupyter notebook. The resulting images and videos are [`test_images_output`](./test_images_output) and 
+The implementation is provided in [`P1.ipynb`](P1.ipynb) Jupyter notebook. The resulting images and videos are [`test_images_output`](./test_images_output) and 
 [`test_videos_output`](./test_videos_output) correspondingly.
 
 Example result:
+
 ![solidWhiteCurve]
+
 ---
 
-### Reflection
-
-### 1. Details of pipeline
+### Details of the pipeline
 
 My pipeline consists of 5 steps applied on an image:
 * Convert the image to grayscale.
@@ -41,7 +41,9 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * For videos, a moving average of the slope and bias is used to provide a more stable behaviour.
 
 
-### 2. Potential shortcomings with the current pipeline
+### Reflection
+
+### 1. Potential shortcomings with the current pipeline
 
 The current implementation is a naive one, it can serve as a proof of concept, but as can be seen from the challenge results, this pipeline is not robust enough to tackle the many problems of real-world cases:
 * Lighting, reflections, shadows, all of them can easily confuse the pipeline, and there's nothing in the pipeline that handles errors.
@@ -50,7 +52,7 @@ The current implementation is a naive one, it can serve as a proof of concept, b
 * Again, I haven't tried, but I don't think this pipeline will work with objects on the road that can obscure the view (such as cars for an example).
 
 
-### 3. Possible improvements to the pipeline
+### 2. Possible improvements to the pipeline
 
 * Improve the region of interest to be more accurate, based on camera position, elevation, etc...
 * Error detection when the Canny image doesn't find enough edges (or finds too many of them).
