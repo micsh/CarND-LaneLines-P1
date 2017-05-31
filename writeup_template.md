@@ -1,18 +1,24 @@
 # **Finding Lane Lines on the Road** 
-
+### Author: Michael Shalala
 ---
 
+[//]: # (Image References)
+
+[solidWhiteCurve]: ./test_images_output/solidWhiteCurve.jpg "Example1"
+
 **Finding Lane Lines on the Road**
+
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on the work in a written report
 
 
-[//]: # (Image References)
+The implementation is provided in P1.ipynb Jupyter notebook. The resulting images and videos are [`test_images_output`](./test_images_output) and 
+[`test_videos_output`](./test_videos_output) correspondingly.
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
+Example result:
+![solidWhiteCurve]
 ---
 
 ### Reflection
@@ -33,8 +39,6 @@ In order to draw a single line on the left and right lanes, I modified the draw_
   * Separate between left and right lane markings.
   * Average left and right lines to have best estimate for each.
 * For videos, a moving average of the slope and bias is used to provide a more stable behaviour.
-
-![alt text][image1]
 
 
 ### 2. Potential shortcomings with the current pipeline
